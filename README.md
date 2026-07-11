@@ -1,16 +1,59 @@
-# React + Vite
+# Chavpk Stream
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Chavpk Stream is a polished entertainment-style web app experience built with React, Vite, and Firebase. It includes:
 
-Currently, two official plugins are available:
+- A cinematic, modern UI with a streaming-inspired layout
+- Firebase authentication for sign-in and account creation
+- Cloud-based watchlist storage using Firestore
+- A clean, responsive experience for desktop and mobile
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Modern entertainment landing experience
+- Authenticated profile flow with email/password
+- Watchlist saved to the cloud for each user
+- Responsive cards and panels for a premium app feel
+- Firebase-ready configuration through environment variables
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting started
 
-## Expanding the ESLint configuration
+1. Install dependencies
+   ```bash
+   npm install
+   ```
+2. Create a Firebase project in the Firebase console.
+3. Enable Authentication with the Email/Password provider.
+4. Create a Firestore database.
+5. Copy the example env file and add your Firebase config values.
+   ```bash
+   cp .env.example .env.local
+   ```
+6. Start the development server.
+   ```bash
+   npm run dev
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Firebase setup
+
+Add these values to your .env.local file:
+
+```env
+VITE_FIREBASE_API_KEY=your-api-key
+VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your-project-id
+VITE_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
+VITE_FIREBASE_APP_ID=your-app-id
+```
+
+If the Firebase values are missing, the app will continue in demo mode so you can preview the UI.
+
+## Build
+
+```bash
+npm run build
+```
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
